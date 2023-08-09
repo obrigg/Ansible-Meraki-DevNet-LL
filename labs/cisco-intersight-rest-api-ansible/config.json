@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "title": "Introduction",
+      "content": "01-intro.md"
+    },
+    {
+      "title": "Installation",
+      "content": "02-install.md"
+    },
+    {
+      "title": "Configure Intersight Connection",
+      "content": "03-connect.md"
+    },
+    {
+      "title": "Query Intersight API",
+      "content": "04-query.md"
+    },
+    {
+      "title": "Configure Intersight Resources",
+      "content": "05-configure.md"
+    }
+  ],
+  "meta": {
+    "code_name": "cisco-intersight-rest-api-ansible",
+    "slug": "Using Ansible with Cisco Intersight",
+    "time": "60",
+    "poweredBy": "",
+    "moduleOnly": false,
+    "hasResources": false,
+    "access": "public",
+    "tags": [
+      {
+        "title": "Intersight"
+      },
+      {
+        "title": "Ansible"
+      }
+    ],
+    "authors": [
+      {
+        "name": "David Soper",
+        "email": "dsoper@cisco.com"
+      }
+    ]
+  },
+  "config": {
+    "devEnv": {
+      "id": "devenv-python310-slim",
+      "defaultFile": "ApiKeyIdFile",
+      "default_content": ""
+    },
+    "additionalResources": {
+      "microsite": {
+        "url": "https://intersight.com/apidocs",
+        "type": "microsite",
+        "title": "Intersight Developer Center"
+      }
+    }
+  }
+}
