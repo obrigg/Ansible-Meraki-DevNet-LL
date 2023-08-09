@@ -1,24 +1,22 @@
-## Configure Meraki Dashboard API Settings
+## Your First Ansible Playbook
 
-Now that you installed the Meraki Ansible Collection, you can use it to configure Meraki's Dashboard API settings. First you need API key credentials from your Meraki account. If you don't have an account, you can use Cisco [DevNet Sandbox](https://developer.cisco.com/site/sandbox/).
+The best way to get started using Ansible is to run playbooks. That is why we are here.
+All Ansible playbooks are written in [YAML (Yet Another Markup Language)](https://yaml.org/). YAML is similar to the JSON without the curlies and quotes. YAML is to JSON what Markdown is to HTML, if that makes sense to you.
 
-### API Keys
+![Ansible-Playbooks](images/Ansible-Playbooks.png)
 
-To generate an Meraki API Key, use [the following guide](https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API).
+The use of Roles and Playbooks is advanced so don't worry about that for now. Understand their place in the hierarchy.
 
-Meraki's Ansible Collection can use environment variables for API Key.  Key data can also be set in playbooks, inventory files, or other variable sources from Ansible. In this lab the example playbooks will lookup data from environment variables.
-
-> It is not recommended to save sensitive information (e.g. credentials and API keys) in an unencrypted file that can accidentally be uploaded with the code to a public repository.
-
-The commands below set the environment variables used by Ansible with data from the files created above.
-
-```bash
-export MERAKI_DASHBOARD_API_KEY= <your API key>
+1. 
+2. Use your favorite editor to create and save a file named hosts (no extension):
 ```
+[meraki_servers]
+meraki_server
+```
+3. Create and save a playbook file named who_am_i.yaml with the following contents.
 
-### Validating the settings
+> ⟁ Be careful with the spacing and alignment of text in YAML files. If you deviate from this strict formatting, you get the errors. JavaScript uses {}s to create structured blocks of data whereas YAML uses spaces. That is why it looks so clean - no curly braces - but you must be diligent with the spaces.
 
-To validate the environment variable is set and the API key is valid, you can run the following playbook, save it as `who_am_i.yml`
 
 ```
 ---
@@ -33,7 +31,12 @@ To validate the environment variable is set and the API key is valid, you can ru
       ansible.builtin.debug:
         msg: "{{ result }}"
 ```
-and run it using the command: `ansible-playbook -i hosts who_am_i.yml`
+
+4. Run the playbook using the command:
+
+```bash
+ansible-playbook -i hosts who_am_i.yml
+```
 
 <details><summary>Click here to see the expected output</summary>
 <pre><code>
