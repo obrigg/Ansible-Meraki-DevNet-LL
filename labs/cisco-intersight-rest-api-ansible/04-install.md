@@ -4,18 +4,18 @@ The Learning Labs environment is Linux based, and you will now install Ansible u
 
 Install Ansible
 ```bash
-sudo pip install ansible
+pip install ansible
 ```
 <details><summary>Click here to see output</summary>
 <pre><code>
 Collecting ansible
-  Downloading ansible-7.4.0-py3-none-any.whl (43.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 MB 2.2 MB/s eta 0:00:00
-Collecting ansible-core~=2.14.4
-  Downloading ansible_core-2.14.4-py3-none-any.whl (2.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 2.3 MB/s eta 0:00:00
+  Downloading ansible-8.2.0-py3-none-any.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 28.8 MB/s eta 0:00:00
+Collecting ansible-core~=2.15.2
+  Downloading ansible_core-2.15.3-py3-none-any.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 35.7 MB/s eta 0:00:00
 ...
-Successfully installed MarkupSafe-2.1.2 ansible-7.4.0 ansible-core-2.14.4 jinja2-3.1.2 resolvelib-0.8.1
+Successfully installed MarkupSafe-2.1.3 ansible-8.2.0 ansible-core-2.15.3 jinja2-3.1.2 resolvelib-1.0.1
 </code></pre>
 </details>
 
@@ -26,15 +26,32 @@ ansible --version
 ```
 <details><summary>Click here to see output</summary>
 <pre><code>
-ansible [core 2.14.4]
+ansible [core 2.15.3]
   config file = None
   configured module search path = ['/home/developer/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/local/lib/python3.10/site-packages/ansible
+  ansible python module location = /home/developer/.local/lib/python3.10/site-packages/ansible
   ansible collection location = /home/developer/.ansible/collections:/usr/share/ansible/collections
-  executable location = /usr/local/bin/ansible
-  python version = 3.10.5 (main, Jun 24 2022, 02:43:59) [GCC 10.2.1 20210110] (/usr/local/bin/python)
+  executable location = /home/developer/.local/bin/ansible
+  python version = 3.10.4 (main, May 11 2022, 07:26:18) [GCC 10.2.1 20210110] (/usr/local/bin/python)
   jinja version = 3.1.2
-  libyaml = False</code></pre>
+  libyaml = False
+</code></pre>
+</details>
+
+Install the Meraki Python SDK
+```bash
+pip install meraki
+```
+<details><summary>Click here to see output</summary>
+<pre><code>
+Defaulting to user installation because normal site-packages is not writeable
+Collecting meraki
+  Downloading meraki-1.36.0-py3-none-any.whl (255 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 255.2/255.2 kB 25.5 MB/s eta 0:00:00
+...
+Installing collected packages: multidict, frozenlist, charset-normalizer, async-timeout, yarl, aiosignal, aiohttp, meraki
+Successfully installed aiohttp-3.8.5 aiosignal-1.3.1 async-timeout-4.0.3 charset-normalizer-3.2.0 frozenlist-1.4.0 meraki-1.36.0 multidict-6.0.4 yarl-1.9.2
+</code></pre>
 </details>
 
 ## Meraki Collection Installation
