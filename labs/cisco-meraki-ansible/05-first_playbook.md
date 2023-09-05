@@ -7,13 +7,23 @@ All Ansible playbooks are written in [YAML (Yet Another Markup Language)](https:
 
 The use of Roles and Playbooks is advanced so don't worry about that for now. Understand their place in the hierarchy.
 
-1. 
-2. Use your favorite editor to create and save a file named hosts (no extension):
+1. Use the built-in editor on the right hand side (you can also use your favorite editor) to create and save a file named hosts (no extension):
+
+```bash
+touch ~/src/hosts
+```
+Copy the following contents in the file named 'hosts'. (You will find the newly created file under `src` folder on the right hand side in the built-in editor)
+
 ```
 [meraki_servers]
 meraki_server
 ```
 3. Create and save a playbook file named who_am_i.yaml with the following contents.
+```bash
+touch ~/src/named who_am_i.yaml
+```
+
+Copy the following contents in the file named 'who_am_i.yaml'. (You will find the newly created file under `src` folder on the right hand side in the built-in editor)
 
 > ⟁ Be careful with the spacing and alignment of text in YAML files. If you deviate from this strict formatting, you get the errors. JavaScript uses {}s to create structured blocks of data whereas YAML uses spaces. That is why it looks so clean - no curly braces - but you must be diligent with the spaces.
 
@@ -35,7 +45,7 @@ meraki_server
 4. Run the playbook using the command:
 
 ```bash
-ansible-playbook -i hosts who_am_i.yml
+ansible-playbook -i hosts who_am_i.yaml
 ```
 
 <details><summary>Click here to see the expected output</summary>
