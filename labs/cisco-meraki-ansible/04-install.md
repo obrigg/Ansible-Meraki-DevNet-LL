@@ -63,7 +63,7 @@ There is an installation command line that can by copy/pasted from Galaxy:
 > **Note:** --force can be added to overwrite any existing Meraki Collection installations.
 
 ```bash
-ansible-galaxy collection install cisco.meraki
+ansible-galaxy collection install git+https://github.com/meraki/dashboard-api-ansible.git -f
 ```
 <details><summary>Click here to see output</summary>
 <pre><code>
